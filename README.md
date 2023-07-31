@@ -5,16 +5,24 @@ machine must be in into testsigning mode ( bcdedit /set testsigning on )
 
 ELAM Driver ( x64\ELAM.dll ) signed with "ELAM Test.cer"
 
+
+```
 EKU:
 	Early Launch Antimalware Driver (1.3.6.1.4.1.311.61.4.1)
 	Code Signing (1.3.6.1.5.5.7.3.3)
 
+```
+
 PPL.exe signed with "PPL Test.cer"
 
+
+```
 EKU:
 	Protected Process Light Verification (1.3.6.1.4.1.311.10.3.22)
 	Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
 	Code Signing (1.3.6.1.5.5.7.3.3)
+
+```
 
 
 ELAM.dll containing sha256 hash of "PPL Test.cer"
@@ -47,17 +55,8 @@ MICROSOFTELAMCERTIFICATEINFO MSELAMCERTINFOID
 
 ```
 
-or certutil -v "PPL Test.cer"
+or certutil -dump "PPL Test.cer" and use "Signature Hash"
 
 
 ELAM.dll must be in same folder as PPL.exe
 
-if exe run ok will be messagebox
-
----------------------------
-    Light
----------------------------
-Antimalware 
----------------------------
-OK   
----------------------------
